@@ -43,4 +43,4 @@ def get_data():
 
 
     driver.quit()
-    return df.to_csv('tripAdvisor_Atividades_ao_ar_livre.csv')
+    return df.to_csv('tripAdvisor_Atividades_ao_ar_livre.csv', index=False)
