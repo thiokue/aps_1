@@ -39,8 +39,8 @@ def get_data():
     }
 
     df = pd.DataFrame(dic)
+    df = df.reset_index(drop=True)
 
 
     driver.quit()
-    return df
-
+    return df.to_csv('tripAdvisor_Atividades_ao_ar_livre.csv')
