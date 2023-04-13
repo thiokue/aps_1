@@ -69,6 +69,7 @@ table {
 }
 table, th, td {
   border-collapse: collapse;
+  border-width: 0;
   padding: 1rem;
   text-align: left;
 }
@@ -98,11 +99,12 @@ tbody tr.hide {
 
 tbody tr:hover {
   background-color: #fff6 !important;
+  transform: scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.2);
 }
 
 tbody tr td,
-tbody tr td p,
-tbody tr td img {
+tbody tr td p{
   transition: .2s ease-in-out;
 }
 

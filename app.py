@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     df = pd.read_csv('tripAdvisor_Atividades_ao_ar_livre.csv')
-    return render_template('index.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
+    df = df.reset_index(drop=True)
+    return render_template('index.html', tables=[df.to_html(classes='data', index=False)], titles=df.columns.values)
 
 @app.route('/update')
 def update():
